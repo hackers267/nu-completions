@@ -9,3 +9,4 @@ export use ./systemctl.nu *
 export use ./nmcli.nu *
 export use ./evcxr.nu *
 export use ./file.nu *
+export use ./gh.nu *
