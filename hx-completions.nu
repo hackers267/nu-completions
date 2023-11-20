@@ -1,9 +1,9 @@
 export extern "hx" [
 --help(-h)
-#Prints help information
+#打印帮助信息
 
 --tutor
-#Loads the tutorial
+#加载tutorial
 
 --health
 #Checks for potential errors in editor setup CATEGORY can be a language or one of 'clipboard', 'languages' or 'all'. 'all' is the default if not specified.
@@ -12,29 +12,29 @@ export extern "hx" [
 #Fetches or builds tree-sitter grammars listed in languages.toml
 
 --config(-c)
-#Specifies a file to use for configuration
+#使用指定的配置文件
 
 -v
 #Increases logging verbosity each use for up to 3 times
 
 --log
-#Specifies a file to use for logging (default file: /home/silence/.cache/helix/helix.log)
+#指定日志文件 (默认文件: /home/silence/.cache/helix/helix.log)
 
 --version(-V)
-#Prints version information
+#输出版本信息
 
 --vsplit
-#Splits all given files vertically into different windows
+# 垂直分割给定的文件
 
 --hsplit
-#Splits all given files horizontally into different windows
+# 水平分割给定的文件
 ]
 export extern "helix" [
 --help(-h)
-#Prints help information
+#打印帮助信息
 
 --tutor
-#Loads the tutorial
+#加载tutorial
 
 --health
 #Checks for potential errors in editor setup CATEGORY can be a language or one of 'clipboard', 'languages' or 'all'. 'all' is the default if not specified.
@@ -43,20 +43,20 @@ export extern "helix" [
 #Fetches or builds tree-sitter grammars listed in languages.toml
 
 --config(-c)
-#Specifies a file to use for configuration
+#使用指定的配置文件
 
 -v
 #Increases logging verbosity each use for up to 3 times
 
 --log
-#Specifies a file to use for logging (default file: /home/silence/.cache/helix/helix.log)
+#指定日志文件 (默认文件: /home/silence/.cache/helix/helix.log)
 
 --version(-V)
-#Prints version information
+#输出版本信息
 
 --vsplit
-#Splits all given files vertically into different windows
+# 垂直分割给定的文件
 
 --hsplit
-#Splits all given files horizontally into different windows
+# 水平分割给定的文件
 ]
