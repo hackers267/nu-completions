@@ -4,7 +4,7 @@ def pattern [] {
 }
 
 def active_pattern_service [] {
-  systemctl list-units --type=service | detect columns | get UNIT | take until {|x| $x =~ "LOAD" }
+  ^systemctl list-units --type=service | detect columns | get UNIT | take until {|x| $x =~ "LOAD" }
 }
 
 # 列出Unit
