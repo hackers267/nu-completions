@@ -3,6 +3,7 @@ export use ./rustup-completions.nu *
 export use ./pnpm-completions.nu *
 export use ./hx-completions.nu *
 export use ./cargo.nu *
+export use ./cargo-nextest.nu *
 export use ./git.nu *
 export use ./paru.nu *
 export use ./systemctl.nu *
