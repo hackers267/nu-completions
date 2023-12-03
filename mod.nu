@@ -8,6 +8,7 @@ export use ./cargo-nextest.nu *
 export use ./cargo-update.nu *
 export use ./cargo-tarpaulin.nu *
 export use ./git.nu *
+export use ./hyprland.nu *
 export use ./paru.nu *
 export use ./systemctl.nu *
 export use ./nmcli.nu *
