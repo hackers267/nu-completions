@@ -373,6 +373,10 @@ export extern "git log" [
   -U                                                  # show diffs
   --follow                                            # show history beyond renames (single file only)
   --grep: string                                      # show log entries matching supplied regular expression
+  --patch(-u)
+  # Generate patch
+  -p
+  # Generate patch
 ]
 
 # Show or change the reflog
