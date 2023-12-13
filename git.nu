@@ -269,6 +269,20 @@ export extern "git switch" [
   --track(-t)                                     # set "upstream" configuration
 ]
 
+# 重置当前的HEAD到指定状态
+export extern "git reset" [
+  --soft: string@"nu-complete git checkout"
+  # 重置暂存区与工作区，与上一次commit保持一致
+  --mixed: string@"nu-complete git checkout"
+  # 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变
+  --hard: string@"nu-complete git checkout"
+  # 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致
+  --merge: string@"nu-complete git checkout"
+  # 重置当前分支的HEAD为指定commit,更新工作区，保留暂存区
+  --keep: string@"nu-complete git checkout"
+  # 重置当前HEAD为指定commit，但保持暂存区和工作区不变
+]
+
 # Apply the change introduced by an existing commit
 export extern "git cherry-pick" [
   commit?: string@"nu-complete git commits all" # The commit ID to be cherry-picked
