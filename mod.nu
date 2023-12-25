@@ -4,6 +4,7 @@ export use ./pnpm-completions.nu *
 export use ./bacon.nu *
 # export use ./trans.nu *
 export use hurl.nu *
+export use hurlfmt.nu *
 export use ./gix.nu *
 export use ./hx-completions.nu *
 export use ./crm.nu *
