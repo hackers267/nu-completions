@@ -1,0 +1,50 @@
+ # Run Hurl file(s) or standard input
+export extern "main" [
+  --aws-sigv4                         #在传输中使用 AWS V4 签名身份验证
+  --cacert                            #用于验证对等方的 CA 证书（PEM 格式）
+  --cert(-E)                          #客户端证书文件和密码
+  --key                               #私钥文件名
+  --color                             #为输出着色
+  --compressed                        #请求压缩响应（使用 deflate 或 gzip）
+  --connect-timeout                   #允许的最长时间连接 [默认值：300]
+  --connect-to                        #对于对给定 HOST1：PORT1 对的请求，请改为连接到 HOST2：PORT2
+  --continue-on-error                 #即使发生错误，也继续执行请求
+  --cookie(-b)                        #从FILE读取cookie
+  --cookie-jar(-c)                    #运行会话后将 cookie 写入 FILE（仅适用于一个会话）
+  --delay                             #设置每个请求前的延迟。[默认值：0]
+  --error-format                      #控制错误消息的格式 [默认值：short] [可能的值：short、long]
+  --fail-at-end                       #最后失败
+  --file-root                         #设置根文件系统导入文件 [默认：当前目录]
+  --location(-L)                      #关注重定向
+  --glob                              #指定与给定 GLOB 匹配的输入文件。可以使用多个 glob 标志
+  --ignore-asserts                    #忽略 Hurl 文件中定义的断言
+  --include(-i)                       #在输出中包含 HTTP 标头
+  --insecure(-k)                      #允许不安全的 SSL 连接
+  --interactive                       #打开交互模式
+  --json                              #将每个 Hurl 文件结果输出为 JSON
+  --max-redirs                        #允许的最大重定向数，-1 表示无限制重定向 [默认值：50]
+  --max-time(-m)                      #允许的最长时间传输 [默认值：300]
+  --no-color                          #不对输出进行着色
+  --no-output                         #抑制输出。默认情况下，Hurl 输出最后一个响应的正文
+  --noproxy                           #不使用代理的主机列表
+  --output(-o)                        #写入 FILE 而不是 stdout
+  --path-as-is                        #告诉 Hurl 不要处理 /.. 的序列。/ 或 /./ 在给定的 URL 路径中
+  --proxy(-x)                         #在给定的协议/主机/端口上使用代理
+  --report-html                       #生成 HTML 报告到 DIR
+  --report-junit                      #将 Junit XML 报告写入 FILE
+  --report-tap                        #将 TAP 报告写入 FILE
+  --resolve                           #为特定主机和端口对提供自定义地址
+  --retry                             #最大重试次数，0 表示无重试，-1 表示无限制重试 [默认值：0]
+  --retry-interval                    #重试前的间隔（以毫秒为单位）[默认值：1000]
+  --ssl-no-revoke                     #（视窗）此选项告诉 Hurl 禁用证书吊销检查。警告：此选项会放松SSL安全性，并且使用此标志可以要求这样做。
+  --test                              #激活测试模式
+  --to-entry                          #执行 Hurl 文件到 ENTRY_NUMBER（从 1 开始）
+  --user-agent(-A)                    #指定要发送到 HTTP 服务器的 User-Agent 字符串
+  --user(-u)                          #将基本 Authentication 标头添加到每个请求
+  --variable                          #定义变量
+  --variables-file                    #定义用于定义变量的属性文件
+  --verbose                           #转为冗长
+  --very-verbose                      #打开详细输出，包括 HTTP 响应和 libcurl 日志
+  --help(-h)                          #打印帮助
+  --version(-V)                       #打印版本
+]
