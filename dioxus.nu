@@ -5,23 +5,23 @@ export extern dx [
   --version(-V)    #印刷版
 ]
 
-def "paltform" [] {
+def platform [] {
   ["web", "desktop"]
 }
 
-def "featuers" [] {
+def features [] {
   ["web", "ssr"]
 }
 
 # 构建 Rust WASM 应用程序及其所有资产
 export extern "dx build" [
-  --target:string             # 用于驱动捆绑过程的索引 HTML 文件 [默认值：index.html]
-  --release                   # 在发布模式下构建[默认值：false]
+  --target: string             # 用于驱动捆绑过程的索引 HTML 文件 默认值：index.html
+  --release                   # 在发布模式下构建 默认值：false
   --verbose                   # 输出详情
-  --example:string            # 构建一个示例[默认值：“”]
-  --profile:string            # 使用自定义配置文件构建
-  --platform:string@platform  # 构建平台：支持Web & Desktop [默认值：“default_platform”] [可能值：web、desktop]
-  --features:string@features  # 要激活的功能列表以空格分隔
+  --example: string            # 构建一个示例 默认值：“”
+  --profile: string            # 使用自定义配置文件构建
+  --platform: string@"platform"  # 构建平台：支持Web & Desktop 默认值：“default_platform”
+  --features: string@"features"  # 要激活的功能列表以空格分隔
   --bin:string                # 指定 bin 目标
   --help(-h)                  # 打印帮助
 ]     
