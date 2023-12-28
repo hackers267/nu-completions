@@ -27,7 +27,14 @@ export extern "dx build" [
 ]     
 
 # 将一些源文件翻译成 Dioxus 代码
-export extern "dx translate" [] 
+export extern "dx translate" [
+  --component(-c)          #激活调试模式
+  --file(-f) :string       #输入文件
+  --raw(-r) :string        #输入文件
+  --output(-o) :string     #输出文件，stdout（如果不存在）
+  --bin :string            #指定 bin 目标
+  --help(-h)               #打印帮助
+] 
 
 # 构建、观察和服务 Rust WASM 应用程序及其所有资产
 export extern "dx serve" []     
