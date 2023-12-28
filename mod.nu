@@ -3,6 +3,7 @@ export use ./rustup-completions.nu *
 export use ./pnpm-completions.nu *
 export use ./bacon.nu *
 # export use ./trans.nu *
+export use ./dioxus.nu *
 export use hurl.nu *
 export use hurlfmt.nu *
 export use ./gix.nu *
