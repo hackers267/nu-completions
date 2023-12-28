@@ -29,15 +29,29 @@ export extern "dx build" [
 # 将一些源文件翻译成 Dioxus 代码
 export extern "dx translate" [
   --component(-c)          #激活调试模式
-  --file(-f) :string       #输入文件
-  --raw(-r) :string        #输入文件
-  --output(-o) :string     #输出文件，stdout（如果不存在）
+  --file(-f): string       #输入文件
+  --raw(-r): string        #输入文件
+  --output(-o): string     #输出文件，stdout（如果不存在）
   --bin :string            #指定 bin 目标
   --help(-h)               #打印帮助
 ] 
 
 # 构建、观察和服务 Rust WASM 应用程序及其所有资产
-export extern "dx serve" []     
+export extern "dx serve" [
+  --target(-t): string            #用于驱动捆绑过程的索引 HTML 文件
+  --port: number                  #开发服务器默认端口：8080
+  --open                          #在默认浏览器中打开应用程序 default: false
+  --example: string               #构建一个示例默认值：“”
+  --release                       #在发布模式下构建默认值： false
+  --verbose                       #输出详情
+  --profile: string               #使用自定义配置文件构建
+  --platform: string@"platform"   #构建平台：支持Web & Desktop
+  --hot-reload                    #使用热重载 rsx 进行构建 默认值： false
+  --cross-origin-policy           #将跨域策略设置为同源默认值： false
+  --features: string              #要激活的功能列表以空格分隔
+  --bin: string                   #指定 bin 目标
+  --help(-h)                      #打印帮助
+]     
 
 # 为 Dioxus 启动一个新项目
 export extern "dx create" []    
