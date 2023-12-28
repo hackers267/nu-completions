@@ -54,25 +54,73 @@ export extern "dx serve" [
 ]     
 
 # 为 Dioxus 启动一个新项目
-export extern "dx create" []    
+export extern "dx create" [
+  --template: string  #模板路径
+  --bin: string       #指定 bin 目标
+  --help(-h)          #打印帮助
+]    
 
 # 干净的输出工件
-export extern "dx clean" []     
+export extern "dx clean" [
+  --bin: string       #指定 bin 目标
+  --help(-h)          #打印帮助
+]     
 
 # 捆绑 Rust 桌面应用程序及其所有资产
-export extern "dx bundle" []    
+export extern "dx bundle" [
+  --package: string              #指定包
+  --release                      #在发布模式下构建
+  --verbose                      #输出详情
+  --example: string              #构建一个示例
+  --profile: string              #使用自定义配置文件构建
+  --platform: string@"platform"  #构建平台：支持Web & Desktop
+  --features: string             #要激活的功能列表以空格分隔
+  --bin: string                  #指定 bin 目标
+  --help(-h)                     #打印帮助
+]    
 
 # 打印此扩展的版本
-export extern "dx version" []   
+export extern "dx version" [
+  --bin: string       #指定 bin 目标
+  --help(-h)          #打印帮助
+]   
 
 # 格式化一些 rsx
-export extern "dx fmt" []       
+export extern "dx fmt" [
+  --check(-c)          #在“检查”模式下运行。如果输入格式正确，则以 0 退出。如果需要格式化，则以 1 退出并打印差异
+  --raw(-r): string    #输入 rsx（选择）
+  --file(-f): string   #输入文件
+  --bin: string        #指定 bin 目标
+  --help(-h)           #打印帮助
+]       
 
 # 检查项目中的 Rust 文件是否有问题
-export extern "dx check" []     
+export extern "dx check" [
+  --file(-f): string   #输入文件
+  --bin: string        #指定 bin 目标
+  --help(-h)           #打印帮助
+]     
 
 # Dioxus 配置文件控件
 export extern "dx config" []    
 
-# 打印此消息或给定子命令的帮助
-export extern "dx help" []      
+#为项目/文件夹初始化 `Dioxus.toml`
+export extern "dx config init" [
+  name: string,
+  --force                         #覆盖旧配置
+  --platform: string@"platform"   #项目默认平台【默认：web】
+  --bin: string                   #指定 bin 目标
+  --help(-h)                      #打印帮助
+]          
+
+#格式化打印 Dioxus 配置
+export extern "dx config format-print" [
+  --bin: string        #指定 bin 目标
+  --help(-h)           #打印帮助
+]  
+
+#创建自定义 html 文件
+export extern "dx config custom-html" [
+  --bin: string        #指定 bin 目标
+  --help(-h)           #打印帮助
+]   
