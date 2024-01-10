@@ -2,6 +2,7 @@ export use ./rustfmt-completions.nu *
 export use ./rustup-completions.nu *
 export use ./pnpm-completions.nu *
 export use ./bacon.nu *
+export use ./user.nu *
 # export use ./trans.nu *
 export use ./dioxus.nu *
 export use ./udisk2.nu *
