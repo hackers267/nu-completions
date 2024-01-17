@@ -588,3 +588,21 @@ export extern "cargo add" [
   --target                # Add as dependency to the given target platform
   ...args
 ]
+
+# 从 Cargo.toml 清单文件中删除依赖项
+export extern "cargo remove" [
+  --dry-run(-n)             #实际上并不编写清单
+  --quiet(-q)               #不打印货物日志消息
+  --verbose(-v)          #使用详细输出（-vv非常详细/build.rs输出）
+  --color                   #着色：自动、始终、从不
+  --config                  #覆盖配置值
+  --help(-h)                #打印帮助
+  --dev                     #从开发依赖中删除
+  --build                   #从构建依赖项中删除
+  --target                  #从目标依赖项中删除
+  --package(-p)             #要从中删除的包
+  --manifest-path           #Cargo.toml 路径
+  --frozen                  #要求 Cargo.lock 和缓存是最新的
+  --locked                  #要求 Cargo.lock 是最新的
+  --offline                 #无需访问网络即可运行
+]
