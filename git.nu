@@ -390,7 +390,8 @@ export extern "git log" [
   --patch(-u)
   # Generate patch
   -p
-  # Generate patch
+  # Trace the evolution of the line range
+  -L: string
 ]
 
 # Show or change the reflog
