@@ -30,3 +30,4 @@ export use ./gh.nu *
 export use ./mcfly.nu *
 export use ./ripgrep.nu *
 export use ./translate-shell.nu *
+export use ./rip-completion.nu *
