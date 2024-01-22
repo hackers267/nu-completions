@@ -6,9 +6,8 @@ def "nu-completions rustup completions commands" [] {
     ["cargo", "rustup"]
 } 
 
-# Todo: add the completions of toolchains: all and installed
 def "nu-completions rustup toolchains" [] {
-   ["stable", "nightly"]
+  ^rustup toolchain list | split row -r '\n' | each {|it| $it | split row '-' | take 1} | flatten | filter { |it| let r = $it | is-empty ; not $r }
 }
 
 def "nu-completions rustup profiles" [] {
