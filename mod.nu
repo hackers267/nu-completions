@@ -1,4 +1,5 @@
 export use ./rustfmt-completions.nu *
+export use ./base.nu *
 export use ./rustup-completions.nu *
 export use ./pnpm-completions.nu *
 export use ./bacon.nu *
