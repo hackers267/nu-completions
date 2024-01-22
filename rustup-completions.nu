@@ -219,6 +219,17 @@ export extern "rustup run" []
 # Modify directory toolchain overrides
 export extern "rustup override" []
 
+# 设置目录的覆盖工具链
+export extern "rustup override set" [
+  --path:path     # 路径
+  toolchain:string@"nu-completions rustup toolchains"
+]
+
+# 删除目录的覆盖工具链
+export extern "rustup override unset" []
+
+# 列出目录工具链覆盖
+export extern "rustup override list" []
 # View the man page for a given command
 export extern "rustup man" []
 
