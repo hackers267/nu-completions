@@ -13,6 +13,7 @@ export use ./gix.nu *
 export use ./hx-completions.nu *
 export use ./crm.nu *
 export use ./cargo.nu *
+export use ./xargo.nu *
 export use ./kondo.nu *
 export use ./cargo-ftag.nu *
 export use ./cargo-nextest.nu *
