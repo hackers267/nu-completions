@@ -162,6 +162,11 @@ export extern "git checkout" [
   -l                                              # create reflog for new branch
 ]
 
+# 合并分支
+export extern "git merge" [
+  branch?: string@"nu-complete git switch"        # name of branch to switch to
+]
+
 # Download objects and refs from another repository
 export extern "git fetch" [
   repository?: string@"nu-complete git remotes" # name of the branch to fetch
@@ -361,6 +366,11 @@ export extern "git remote get-url" [
 export extern "git remote set-url" [
   remote: string@"nu-complete git remotes"             # remote to set URL for
   url: string                                          # new URL for remote
+]
+
+# 根据远程创建的分支清理本地分支
+export extern "git remote prune" [
+  remote: string@"nu-complete git remotes"             # remote to set URL for
 ]
 
 # Show changes between commits, working tree etc
